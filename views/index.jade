@@ -1,0 +1,69 @@
+extends layout
+
+block content
+	h1= title
+	p Welcome to Student Management
+	// Wrapper
+	#wrapper
+	
+		// STUDENT INFO
+		#studentInfo
+			h2 Student Info
+			p
+				strong Name:
+				|  <span id='userInfoName'></span>
+				br
+				strong Date of Birth:
+				|  <span id='userInfoDoB'></span>
+				br
+				strong Class:
+				|  <span id='userInfoClass'></span>
+				br
+				strong Score:
+				|  <span id='userInfoScore'></span>
+		// /STUDENT INFO
+
+		// STUDENT LIST
+		h2 Student List
+		#studentList
+			table
+				thead
+					th ID
+					th Name
+					th Date of birth
+					th Class
+					th Score
+					th Edit?
+					th Delete?
+				tbody
+		// /STUDENT LIST
+		
+		// ADD STUDENT
+		h2 Add Student
+		#addStudent
+			fieldset
+				input#inputName(type='text', placeholder='Name')
+				input#inputDoB(type='text', placeholder='Date of birth')
+				br
+				input#inputClass(type='text', placeholder='Class')
+				input#inputScore(type='text', placeholder='Score')
+				br
+				button#btnAddStudent Add Student
+		// /ADD STUDENT
+		
+		// EDIT STUDENT
+		h2 Edit Student
+		#editStudent
+			fieldset
+				input#inputID(type='text', placeholder='ID', disabled=role!==1)
+				br
+				input#inputName(type='text', placeholder='Name')
+				input#inputDoB(type='text', placeholder='Date of birth')
+				br
+				input#inputClass(type='text', placeholder='Class')
+				input#inputScore(type='text', placeholder='Score')
+				br
+				button#btnEditStudent Edit Student
+		// /EDIT STUDENT
+
+		// /WRAPPER
